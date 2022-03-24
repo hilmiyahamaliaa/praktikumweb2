@@ -15,24 +15,23 @@
         $nama1 = $_POST['nama1'];
         $nama2 = $_POST['nama2'];
         $nama3 = $_POST['nama3'];
-        if($nama1<$nama2 AND $nama1<$nama3){
-            if($nama2<$nama3){
-                echo "$nama1<br>$nama2<br>$nama3<br>";
-            }else{
-                echo "$nama1<br>$nama3<br>$nama2<br>";
-            }
-        }else if($nama2<$nama1 AND $nama2<$nama3){
-            if($nama1<$nama3){
-                echo "$nama2<br>$nama1<br>$nama3<br>";
-            }else{
-                echo "$nama2<br>$nama3<br>$nama1<br>";
-            }
-        }else if($nama3<$nama1 AND $nama3<$nama2){
-            if($nama1<$nama2){
-                echo "$nama3<br>$nama1<br>$nama2<br>";
-            }else{
-                echo "$nama3<br>$nama2<br>$nama1<br>";
-            }
+        if($nama1<$nama2 && $nama1<$nama2 && $nama2<$nama3){
+            echo "$nama1<br>$nama2<br>$nama3";
+        }
+        else if($nama1<$nama2 && $nama1<$nama2 && $nama2>$nama3){
+            echo "$nama1<br>$nama3<br>$nama2";
+        }
+        else if($nama2<$nama1 && $nama2<$nama3 && $nama1>$nama3){
+            echo "$nama2<br>$nama3<br>$nama1";
+        }
+        else if($nama2<$nama1 && $nama2<$nama3 && $nama1<$nama3){
+            echo "$nama2<br>$nama1<br>$nama3";
+        }
+        else if($nama3<$nama1 && $nama3<$nama2 && $nama1<$nama2){
+            echo "$nama3<br>$nama1<br>$nama2";
+        }
+        else if($nama3<$nama1 && $nama3<$nama2 && $nama1>$nama2){
+            echo "$nama3<br>$nama2<br>$nama1";
         }
         ?>
     </body>
